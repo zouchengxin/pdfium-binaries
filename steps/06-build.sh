@@ -14,7 +14,7 @@ if [ "$TARGET_CPU" == "wasm" ]; then
     -s ALLOW_MEMORY_GROWTH=1
     -s ALLOW_TABLE_GROWTH=1
     -s EXPORTED_FUNCTIONS="$EXPORTED_FUNCTIONS,_free,_malloc,_calloc,_realloc"
-    -s EXPORTED_RUNTIME_METHODS="ccall,cwrap,addFunction,removeFunction"
+    -s EXPORTED_RUNTIME_METHODS="ccall,cwrap,addFunction,removeFunction,setValue,getValue,UTF8ToString,stringToUTF8,UTF16ToString,stringToUTF16,FS"
     -s LLD_REPORT_UNDEFINED
     -s WASM=1
     -o "$BUILD_DIR/pdfium.html"
